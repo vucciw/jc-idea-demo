@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>com.jc.demo.jc-idea-demo</id>
+    <name>Hello Action Project</name>
+    <vendor email="jc@jc.com" url="http://www.jc.com">JC</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+
+    <actions>
+        <group id="MyPlugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="Myplugin.Textboxes" class="com.jc.idea.HelloAction" text="Hello" description="Says hello"/>
+            <action id="gc" class="com.jc.idea.CodeGenAction" text="gc" description="code generator"/>
+        </group>
+    </actions>
+</idea-plugin>
